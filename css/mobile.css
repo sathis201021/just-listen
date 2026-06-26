@@ -1,0 +1,167 @@
+/* =============================================
+   Just Listen — Mobile Styles
+   ============================================= */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero .btn-lg {
+    width: 100%;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .step {
+    border-radius: var(--radius-sm);
+  }
+
+  .step-arrow {
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 0;
+    color: var(--gray-dark);
+    font-size: 1.25rem;
+  }
+
+  .about-preview {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .about-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    margin: 1rem auto 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .cta-banner {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--card);
+    border-left: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.35s ease;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.0625rem;
+    color: var(--white);
+  }
+
+  .nav-toggle {
+    display: block;
+    z-index: 101;
+  }
+
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 98;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  section {
+    padding: 3.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.0625rem;
+  }
+
+  .pricing-amount {
+    font-size: 2.25rem;
+  }
+}
